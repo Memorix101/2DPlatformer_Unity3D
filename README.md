@@ -1,4 +1,4 @@
-# 2DPlatformer_Unity3D
+# Unity3D_2DPlatformer
 A simple side scroller platformer in Unity
 
 It's based on my [MonoGame 2D Platformer](https://github.com/Memorix101/MonoGame_2DPlatformer)<br/>
