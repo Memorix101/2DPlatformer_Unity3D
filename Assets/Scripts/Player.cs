@@ -193,6 +193,7 @@ public class Player : MonoBehaviour
             if (col.gameObject.tag == "HitZone")
             {
                 // do stuff here
+                score += 100;
                 Debug.Log("HitZone " + col.gameObject.name);
                 col.transform.parent.GetComponent<Enemy>().KillMe();
             }

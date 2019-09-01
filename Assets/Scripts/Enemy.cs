@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite killed_gfx;
     private Animator anim;
+    public GameObject score_go;
 
     // Start is called before the first frame update
     void Start()
@@ -81,6 +82,8 @@ public class Enemy : MonoBehaviour
     public void KillMe()
     {
         killed = true;
+
+        Instantiate(score_go, transform.position, Quaternion.identity);
 
         // play sound
         GameObject soundObj = new GameObject("Enemy_Kill_Sound");

@@ -331,6 +331,8 @@ MonoBehaviour:
   dead_snd: {fileID: 8300000, guid: daa5b83cddbaaae468e4dac04702d17d, type: 3}
   killed_gfx: {fileID: -8003713118216195437, guid: d9d95f4432277f349988598a177bdbe7,
     type: 3}
+  score_go: {fileID: 4516474587539051023, guid: ab3fb8b8f5c0a4540af5fe6f789e34a9,
+    type: 3}
 --- !u!50 &-1408199326759197174
 Rigidbody2D:
   serializedVersion: 4
