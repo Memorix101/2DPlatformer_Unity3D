@@ -10,21 +10,30 @@ using UnityEngine;
 public class LevelLoader : MonoBehaviour
 {
     private string _filePath;
-
     public GameObject Tile0, Tile1, Tile2, Coin, Player, TestActor, Enemy, Exit;
-
+    
     // Start is called before the first frame update    
     void Start()
     {
-        if (File.Exists((Application.dataPath + "/Content/Levels/Test.map")))
+        CheckingLevelFiles();
+    }
+
+    void CheckingLevelFiles()
+    {
+#if UNITY_EDITOR
+        _filePath = Application.dataPath + "/Content/Levels/Test.map";
+#else
+        _filePath = Application.dataPath + "/../Content/Levels/Test.map";
+#endif
+
+        if (File.Exists(_filePath))
         {
-            Debug.Log("File Found at: " + Application.dataPath);
-            _filePath = Application.dataPath + "/Content/Levels/Test.map";
+            Debug.LogError("File Found at: " + _filePath);
             LoadLevel("Test.map");
         }
         else
         {
-            Debug.LogError("map file not found!");
+            Debug.LogError("File not found! " + _filePath);
         }
     }
 
